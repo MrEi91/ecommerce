@@ -11,6 +11,8 @@ const app = express()
 
 let index = require('./routes/index')
 let item = require('./routes/item')
+let customer = require('./routes/customer')
+let cart = require('./routes/cart')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -19,6 +21,8 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api', index)
 app.use('/api/items', item)
+app.use('/api/customers', customer)
+app.use('/api/carts', cart)
 
 app.listen(3000)
 
