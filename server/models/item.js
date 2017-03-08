@@ -9,6 +9,8 @@ let itemSchema = Schema({
   'description': String,
   'price': Number,
   'stock': Number
+}, {
+  timestamps: true
 })
 
 let item = mongoose.model('item', itemSchema)

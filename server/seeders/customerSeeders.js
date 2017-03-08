@@ -11,5 +11,5 @@ for (var i = 1; i <= 9; i++) {
     'phone': faker.phone.phoneNumberFormat()
   })
 }
-console.log(arrCustomers)
+// console.log(arrCustomers)
 module.exports = arrCustomers

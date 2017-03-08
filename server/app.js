@@ -3,14 +3,14 @@ const bodyParser = require('body-parser')
 
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/ecommerce', (err) => {
-  err ? console.log('belum connect') : console.log('connected')
+  err ? console.log('is not connected') : console.log('connected')
 })
 mongoose.Promise = global.Promise
 
 const app = express()
 
 let index = require('./routes/index')
-// let twatt_recent = require('./routes/twatt-recent')
+let item = require('./routes/item')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/api', index)
-// app.use('/api/twatt', twatt_recent)
+app.use('/api/items', item)
 
 app.listen(3000)
 

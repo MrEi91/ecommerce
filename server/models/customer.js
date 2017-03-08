@@ -9,6 +9,8 @@ let customerSchema = Schema({
   'address': String,
   'zipCode': String,
   'phone': String
+}, {
+  timestamps: true
 })
 
 let customer = mongoose.model('customer', customerSchema)

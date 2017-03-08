@@ -11,5 +11,5 @@ for (var i = 1; i <= 9; i++) {
     'stock': faker.random.number()
   })
 }
-console.log(arrItems)
+// console.log(arrItems)
 module.exports = arrItems
