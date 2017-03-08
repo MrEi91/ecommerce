@@ -13,6 +13,7 @@
   "author": "Ei",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "faker": "^4.1.0",
