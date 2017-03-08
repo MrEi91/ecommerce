@@ -1,0 +1,16 @@
+'use strict'
+
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+let itemSchema = Schema({
+  'itemCode': String,
+  'name': String,
+  'description': String,
+  'price': Number,
+  'stock': Number
+})
+
+let item = mongoose.model('item', itemSchema)
+
+module.exports = item
