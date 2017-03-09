@@ -1,15 +1,16 @@
 'use strict'
 
 let app = new Vue({
-  el: '#app',
+  el: '#item',
   data: {
+    items: [],
     message: 'Hello Vue!'
   },
   methods: {
     getItems: () => {
       axios.get('http://localhost:3000/api/')
         .then((response) => {
-          console.log(response)
+          app.items = response.data
         })
         .catch((error) => {
           console.log(error)
