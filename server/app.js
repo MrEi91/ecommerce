@@ -7,6 +7,7 @@ mongoose.connect('mongodb://localhost/ecommerce', (err) => {
 })
 mongoose.Promise = global.Promise
 
+const cors = require('cors')
 const app = express()
 
 let index = require('./routes/index')
@@ -14,6 +15,7 @@ let item = require('./routes/item')
 let customer = require('./routes/customer')
 let cart = require('./routes/cart')
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: false
