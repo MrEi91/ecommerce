@@ -22,9 +22,9 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/api', index)
-app.use('/api/items', item)
-app.use('/api/customers', customer)
-app.use('/api/carts', cart)
+app.use('/api', item)
+app.use('/api', customer)
+app.use('/api', cart)
 
 app.listen(3000)
 

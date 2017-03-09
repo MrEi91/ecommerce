@@ -7,7 +7,7 @@ let app = new Vue({
   },
   methods: {
     getItems: () => {
-      axios.get('http://localhost:3000/api/items')
+      axios.get('http://localhost:3000/api/')
         .then((response) => {
           console.log(response)
         })
